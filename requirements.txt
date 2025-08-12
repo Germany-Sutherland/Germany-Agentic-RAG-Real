@@ -4,4 +4,7 @@ transformers
 numpy
 faiss-cpu
 torch
+scikit-learn
+evaluate
+bert-score
 
