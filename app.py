@@ -80,3 +80,14 @@ if st.session_state["history"]:
 
 st.markdown("---")
 st.caption("Multi-agent RAG demo built with sentence-transformers & Hugging Face (free & open-source).")
+
+
+from evaluation_metrics import evaluate_text
+
+# Compute evaluation metrics
+scores = evaluate_text(question, result)
+
+st.subheader("Evaluation Metrics")
+for metric, value in scores.items():
+    st.write(f"{metric}: {value:.4f}")
+
